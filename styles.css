@@ -51,10 +51,28 @@ body {
 
 /* NAVIGÁCIA */
 
+
+#menuBtn {
+    display: none;
+
+}
+
+.mobile-menu-header,
+#closeMenu,
+#mobileMenu {
+    display: none;
+}
+
+
+
 nav.panel {
     color: var(--textColorInv);
     border-bottom: 1.5px solid var(--Gray);
     background-color: white;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 
 }
 
@@ -80,6 +98,7 @@ nav a svg {
 nav.panel a {
     font-size: 1.2rem;
     transition: 0.3s;
+    line-height: 1.2rem;
 
 
 }
@@ -98,8 +117,7 @@ nav.panel h1 a {
 
 }
 
-/* schováme menu defaultne */
-nav.panel #menuBtn {
+nav.panel #menuBtn #closeMenu {
     display: none;
 }
 
@@ -803,7 +821,7 @@ footer .arrow {
 @media (max-width: 425px) {
 
 
-  
+
 
     .content {
         max-width: 425px;
@@ -814,11 +832,14 @@ footer .arrow {
 
     }
 
-    
+
     .xb {
         justify-content: center;
     }
 
+    .xa {
+        display: none;
+    }
 
     nav.panel .container {
         display: flex;
@@ -876,7 +897,7 @@ footer .arrow {
     }
 
     #mobileMenu {
-        display: none;
+        display: flex;
         position: fixed;
         top: 0;
         left: 0;
@@ -950,6 +971,8 @@ footer .arrow {
         border: none;
         font-size: 1.8rem;
         cursor: pointer;
+
+        display: block;
     }
 
 
@@ -1016,7 +1039,7 @@ footer .arrow {
         padding-left: 0rem;
 
     }
-   
+
     .pink-bg h2 {
         color: var(--MainPink);
         font-size: 7rem;
@@ -1028,7 +1051,7 @@ footer .arrow {
         -webkit-text-stroke-color: var(--MainPink);
     }
 
-    
+
 
     .ponuka article {
         height: 40vh;
